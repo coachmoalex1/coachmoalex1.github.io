@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101512">
+  <title>خطط التغذية والتمرين | COACH MO</title>
+  <style>
+    :root{--bg:#0b100d;--panel:#141c17;--panel2:#19241d;--text:#f4f7f4;--muted:#aebbb1;--green:#00e676;--mint:#00bfa5;--border:#2b3a30}
+    *{box-sizing:border-box}
+    body{margin:0;background:radial-gradient(ellipse at top,#15251a 0,#0b100d 55%);color:var(--text);font-family:Tahoma,Arial,sans-serif;line-height:1.8}
+    a{color:inherit}
+    .wrap{width:min(1100px,92%);margin:auto}
+    header{padding:22px 0;border-bottom:1px solid var(--border)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .brand{font-weight:900;letter-spacing:.4px;font-size:1.15rem}.brand span{color:var(--green)}
+    .back{color:var(--muted);text-decoration:none}
+    .hero{padding:48px 0 28px;text-align:center}
+    .eyebrow{color:var(--green);font-weight:bold}
+    h1{font-size:clamp(2rem,5vw,3.3rem);line-height:1.25;margin:8px 0 14px}
+    .hero p{max-width:720px;margin:0 auto;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:28px 0}
+    .card{background:linear-gradient(160deg,var(--panel2),var(--panel));border:1px solid var(--border);border-radius:18px;padding:22px}
+    .card h2,.card h3{margin-top:0}.card p{color:var(--muted)}
+    .tag{display:inline-block;border:1px solid #28563b;color:var(--green);border-radius:99px;padding:3px 10px;font-size:.82rem}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:12px;padding:12px 18px;background:linear-gradient(135deg,var(--green),var(--mint));color:#07110b;text-decoration:none;font-weight:800;cursor:pointer;font-size:1rem}
+    .btn.secondary{background:#202d24;color:var(--text);border:1px solid var(--border)}
+    .section{padding:18px 0 34px}
+    .section-head{margin-bottom:16px}.section-head p{color:var(--muted);margin-top:0}
+    .form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    label{display:block;font-weight:bold;margin-bottom:5px}
+    input,select{width:100%;background:#0c130e;border:1px solid var(--border);border-radius:10px;padding:12px;color:var(--text);font:inherit}
+    input:focus,select:focus{outline:2px solid #00e67666;border-color:var(--green)}
+    .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+    .result{display:none;margin-top:20px}
+    .result.show{display:block}
+    .result-list{padding-right:20px}
+    .notice{border-right:3px solid var(--green);background:#142019;padding:12px 14px;border-radius:8px;color:var(--muted);font-size:.92rem}
+    footer{border-top:1px solid var(--border);padding:24px 0;color:var(--muted);font-size:.9rem;margin-top:24px}
+    @media(max-width:800px){.grid{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.hero{padding-top:34px}.card{padding:18px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <div class="brand">COACH <span>MO</span></div>
+    <a class="back" href="index.html">العودة للرئيسية ←</a>
+  </div>
+</header>
+<main class="wrap">
+  <section class="hero">
+    <div class="eyebrow">خطتك تبدأ من هنا</div>
+    <h1>التغذية والتمرين، <span style="color:var(--green)">في مكان واحد</span></h1>
+    <p>اختار هدفك، تصفّح الخطط الجاهزة أو أدخل بياناتك للحصول على تقدير مبدئي للسعرات والبروتين مع اقتراح لجدول التمرين.</p>
+    <div class="actions" style="justify-content:center">
+      <a class="btn" href="#custom">جهّز خطتي</a>
+      <a class="btn secondary" href="#ready">تصفّح الخطط الجاهزة</a>
+    </div>
+  </section>
+
+  <section class="section" id="ready">
+    <div class="section-head">
+      <h2>الخطط الجاهزة</h2>
+      <p>اختيارات مبدئية قابلة للتعديل حسب مستواك ووقتك وإمكانياتك.</p>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <span class="tag">زيادة العضلات</span>
+        <h3>نظام غذائي لبناء العضلات</h3>
+        <p>وجبات متوازنة مع مصدر بروتين وكربوهيدرات وخضار، مع ضبط الكميات حسب احتياجك.</p>
+        <a class="btn secondary" href="#custom" data-goal="gain">خصص الخطة</a>
+      </article>
+      <article class="card">
+        <span class="tag">خسارة الدهون</span>
+        <h3>نظام غذائي لخسارة الدهون</h3>
+        <p>تركيز على وجبات مشبعة وبروتين كافٍ وعجز معتدل في السعرات بدل الحرمان القاسي.</p>
+        <a class="btn secondary" href="#custom" data-goal="loss">خصص الخطة</a>
+      </article>
+      <article class="card">
+        <span class="tag">لياقة عامة</span>
+        <h3>جدول تمرين للمبتدئين</h3>
+        <p>ثلاثة أيام أسبوعيًا لتمرين الجسم كله، مع وقت للتعافي وتعلّم الأداء الصحيح.</p>
+        <a class="btn secondary" href="#custom">اختار عدد أيامك</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="custom">
+    <div class="section-head">
+      <h2>جهّز خطتك المبدئية</h2>
+      <p>املأ البيانات الأساسية؛ الحسابات تقريبية وليست تشخيصًا أو وصفة طبية.</p>
+    </div>
+    <div class="card">
+      <form id="planForm">
+        <div class="form-grid">
+          <div><label for="age">العمر</label><input id="age" type="number" min="18" max="90" required placeholder="مثال: 28"></div>
+          <div><label for="sex">الجنس المستخدم في معادلة السعرات</label><select id="sex" required><option value="male">ذكر</option><option value="female">أنثى</option></select></div>
+          <div><label for="height">الطول (سم)</label><input id="height" type="number" min="120" max="230" required placeholder="مثال: 175"></div>
+          <div><label for="weight">الوزن (كجم)</label><input id="weight" type="number" min="35" max="300" step=".1" required placeholder="مثال: 78"></div>
+          <div><label for="goal">الهدف</label><select id="goal" required><option value="gain">زيادة العضلات/الوزن تدريجيًا</option><option value="loss">خسارة الدهون تدريجيًا</option><option value="maintain">المحافظة على الوزن</option></select></div>
+          <div><label for="activity">مستوى النشاط اليومي</label><select id="activity" required><option value="1.2">قليل الحركة</option><option value="1.375">نشاط خفيف (1–3 أيام)</option><option value="1.55" selected>نشاط متوسط (3–5 أيام)</option><option value="1.725">نشاط مرتفع (6–7 أيام)</option></select></div>
+          <div><label for="days">أيام التمرين أسبوعيًا</label><select id="days" required><option value="3">3 أيام</option><option value="4">4 أيام</option><option value="5">5 أيام</option></select></div>
+          <div><label for="level">مستوى التدريب</label><select id="level"><option value="beginner">مبتدئ</option><option value="intermediate">متوسط</option></select></div>
+        </div>
+        <div class="actions"><button class="btn" type="submit">احسب خطتي المبدئية</button><button class="btn secondary" type="reset">مسح البيانات</button></div>
+      </form>
+      <div id="result" class="result" aria-live="polite"></div>
+    </div>
+  </section>
+  <div class="notice">تنبيه: الأداة تقديرية للبالغين الأصحاء فقط. لا تستخدمها كبديل عن الطبيب أو أخصائي التغذية، خصوصًا مع الحمل أو الأمراض المزمنة أو تاريخ اضطرابات الأكل. لا يُنصح بتطبيق أهداف خسارة/زيادة الوزن تلقائيًا لمن هم دون 18 عامًا.</div>
+</main>
+<footer><div class="wrap">© COACH MO — ابدأ بخطوة ثابتة، وراجع تقدمك بانتظام.</div></footer>
+<script>
+const form = document.getElementById('planForm');
+const result = document.getElementById('result');
+document.querySelectorAll('[data-goal]').forEach(link => link.addEventListener('click', () => {
+  document.getElementById('goal').value = link.dataset.goal;
+}));
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const age = Number(document.getElementById('age').value);
+  const sex = document.getElementById('sex').value;
+  const height = Number(document.getElementById('height').value);
+  const weight = Number(document.getElementById('weight').value);
+  const goal = document.getElementById('goal').value;
+  const activity = Number(document.getElementById('activity').value);
+  const days = Number(document.getElementById('days').value);
+  const level = document.getElementById('level').value;
+  if (age < 18) {
+    result.className = 'result show';
+    result.innerHTML = '<h3>محتاج تقييم مناسب للسن</h3><p>الأداة الحالية مخصصة للبالغين. يُفضّل للمراهقين مراجعة مختص مع ولي الأمر بدل تحديد السعرات تلقائيًا.</p>';
+    return;
+  }
+  // Mifflin-St Jeor estimate; not a medical assessment.
+  const bmr = 10 * weight + 6.25 * height - 5 * age + (sex === 'male' ? 5 : -161);
+  const maintenance = Math.round(bmr * activity);
+  let calories = maintenance;
+  let goalLabel = 'المحافظة على الوزن';
+  if (goal === 'gain') { calories = maintenance + 200; goalLabel = 'زيادة تدريجية'; }
+  if (goal === 'loss') { calories = maintenance - 300; goalLabel = 'خسارة تدريجية'; }
+  calories = Math.max(1200, calories);
+  const proteinMin = Math.round(weight * 1.4);
+  const proteinMax = Math.round(weight * 2.0);
+  let split = '';
+  if (days === 3) split = '3 أيام جسم كامل، مع يوم راحة بين الجلسات قدر الإمكان.';
+  if (days === 4) split = '4 أيام: علوي/سفلي مرتين أسبوعيًا، مع توزيع الراحة حسب جدولك.';
+  if (days === 5) split = '5 أيام: تقسيمة مناسبة لمستواك، مع تجنب تدريب نفس العضلة بشدة يومين متتاليين.';
+  result.className = 'result show';
+  result.innerHTML = `<h3>خطتك المبدئية</h3>
+    <p><strong>الهدف:</strong> ${goalLabel}</p>
+    <ul class="result-list">
+      <li><strong>سعرات يومية تقديرية:</strong> ${calories.toLocaleString('en-US')} سعرة.</li>
+      <li><strong>البروتين اليومي:</strong> حوالي ${proteinMin}–${proteinMax} جم كمدى مبدئي شائع للبالغين النشطين.</li>
+      <li><strong>جدول التمرين:</strong> ${split}</li>
+      <li><strong>اقتراح غذائي:</strong> وزّع البروتين على الوجبات، وأضف خضارًا وفاكهة ومصادر كربوهيدرات ودهون مناسبة، وعدّل الكميات حسب الجوع والتقدم.</li>
+    </ul>
+    <p class="notice">هذه بداية تقريبية وليست خطة وجبات شخصية كاملة. راقب الوزن والطاقة والأداء لمدة 2–3 أسابيع ثم راجع التقديرات. إذا ظهرت أعراض أو لديك حالة صحية، استشر مختصًا.</p>`;
+});
+form.addEventListener('reset', () => { result.className = 'result'; result.innerHTML = ''; });
+</script>
+</body>
+</html>
